@@ -1,0 +1,78 @@
+
+
+<%- include("../header"); %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="h1-agregar"> Agregar Libros:</h1>
+<div class="div-agregar">
+
+
+<br>
+<br>
+
+
+<!-- LLAMA AL ROUTER DE ARGEGAR-->
+
+    <form method="post" action="/libros/insertar">
+
+        <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input required id="titulo" placeholder="Nombre del libro" class="form-control" type="text"
+                name="titulo">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <input required id="precio" placeholder="Precio del libro" class="form-control" type="number"
+                name="precio">
+        </div>
+        <br>        
+        <div class="form-group">
+            <label for="isbn">Isbn</label>
+            <input required id="isbn" placeholder="Isbn del libro" class="form-control" type="number"
+                name="isbn">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="detalle">Detalle</label>
+            <input required id="detalle" placeholder="Detalle del libro" class="form-control" type="text"
+                name="detalle">
+        </div>
+
+  
+<br>
+    
+
+      
+      
+
+<br>
+<br>
+
+          
+<div class="form-group">
+    <button class="btn btn-success">Guardar</button>
+   
+</div>
+</form>
+</div>
+
+
+<br>
+<br>
+
+
+
+
+
+<%- include("../footer"); %>

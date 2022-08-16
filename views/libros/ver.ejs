@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+    
+
+<%- include("../header"); %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="h1-listado">Listado de libros:</h1>
+
+
+<div class="div-listado">
+  
+
+
+    <table class="tabla-ver">
+        <thead class="thead-ver">
+            <tr class="tr-ver">
+                
+             
+                <th class="th-ver">Titulo</th>
+                <th class="th-ver">Precio</th>
+                <th class="th-ver">Isbn</th>
+                <th class="th-ver">Detalle</th>
+                
+              
+                
+                <th class="th-ver">Editar</th>
+                <th class="th-ver">Eliminar</th>
+
+            
+        </thead>
+        <tbody>
+            
+            <% libros.forEach(libro => { %>
+
+            <tr>
+                <td class="td-ver"><%= libro.titulo %></td>
+                <td class="td-ver"><%= libro.precio %></td>
+                <td class="td-ver"><%= libro.isbn %></td>
+                <td class="td-ver"><%= libro.detalle %></td>
+
+              
+
+                <td class="td-boton1">
+                    <a href="/libros/editar/<%= libro.id %>" >
+                    <img src="images/icono/editar.png"class="boton-editar">
+               
+                    </a>
+                </td>
+
+                <td class="td-boton2">
+                    <a href="/libros/eliminar/<%= libro.id %>">
+                        <img src="images/icono/eliminar.png"class="boton-eliminar">
+                       
+                    </a>
+                </td>
+            </tr>
+
+
+            <% })%>
+
+
+            
+        </tbody>
+    </table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<%- include("../footer"); %>
+
+
+</body>
+</html>
+
+
+
+
